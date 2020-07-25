@@ -12,3 +12,12 @@ L.tileLayer('https://api.maptiler.com/maps/bright/{z}/{x}/{y}.png?key=kVYnuZ3P22
 
 //EX1. FASE2. Posar un marcador a la ubicació Carrer Balmes 16.
 var marker = L.marker([41.386943, 2.165957]).addTo(mymap);
+
+//EX1. FASE3. Al fer click al marcador, ens haurà de mostrar un missatge amb la direcció.
+
+function onMapClick(e) {
+    marker.bindPopup("<b>Restaurant Centfocs</b><br>Restaurante Mediterráneo<br> Carrer de Balmes, 16, 08007 Barcelona").openPopup();
+
+}
+
+mymap.on('click', onMapClick);
